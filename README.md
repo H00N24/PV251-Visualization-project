@@ -1,8 +1,8 @@
 # PV251 Visualization project
 
 
-[Visualization preview](https://www.fi.muni.cz/~xkurak/)
-
+* [Visualization preview](https://www.fi.muni.cz/~xkurak/)
+* [GitHub](https://github.com/H00N24/PV251-Visualization-project)
 
 ### Visualization
 Requirements:
