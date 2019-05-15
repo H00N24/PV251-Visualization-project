@@ -1,8 +1,14 @@
 # PV251 Visualization project
 
 
-* [Visualization preview](https://www.fi.muni.cz/~xkurak/)
+### Preview
+* [Online visualization preview](https://www.fi.muni.cz/~xkurak/)
 * [GitHub](https://github.com/H00N24/PV251-Visualization-project)
+
+#### Comparison of classifiers
+![](img/comparison.gif)
+#### Comparison of dimension reduction methods
+![](img/dimension-reduction.gif)
 
 ### Visualization
 Requirements:
