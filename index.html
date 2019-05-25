@@ -5,303 +5,1190 @@
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 10px;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+.grid-item {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+h1 {
+    text-align:center;
+}
+.loader {
+    display: inline-block;  
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
 </head>
 <body>
 <h1>Comparison of classifiers</h1>
-<div id="vis_comparison"> </div>
+<div id="vis_comparison" style="text-align:center;"> <div class="loader"></div> </div>
 
 <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/comparison.json";
 vegaEmbed('#vis_comparison', spec).then(function(result) {
 }).catch(console.error);
 </script>
-<h1>Comparison of dimension reduction methods</h1>
-<div id="vis_dataset-fluid"> </div>
+<h1>Comparison of dimension reduction methods</h1><div  class="grid-container">
 
-<script type="text/javascript">
+<div class="grid-item">
+    <button class="button" id="btn_fluid">fluid</button>
+    <div id="modal_fluid" class="modal">
+        <div class="modal-content" >
+            <div id="vis_fluid" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-fluid.json";
-vegaEmbed('#vis_dataset-fluid', spec).then(function(result) {
+vegaEmbed('#vis_fluid', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-wav40"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_fluid");
+var btn = document.getElementById("btn_fluid");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_wav40">wav40</button>
+    <div id="modal_wav40" class="modal">
+        <div class="modal-content" >
+            <div id="vis_wav40" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav40.json";
-vegaEmbed('#vis_dataset-wav40', spec).then(function(result) {
+vegaEmbed('#vis_wav40', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-lib_cons_miss10"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_wav40");
+var btn = document.getElementById("btn_wav40");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_lib_cons_miss10">lib_cons_miss10</button>
+    <div id="modal_lib_cons_miss10" class="modal">
+        <div class="modal-content" >
+            <div id="vis_lib_cons_miss10" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss10.json";
-vegaEmbed('#vis_dataset-lib_cons_miss10', spec).then(function(result) {
+vegaEmbed('#vis_lib_cons_miss10', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-quisclas"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_lib_cons_miss10");
+var btn = document.getElementById("btn_lib_cons_miss10");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_quisclas">quisclas</button>
+    <div id="modal_quisclas" class="modal">
+        <div class="modal-content" >
+            <div id="vis_quisclas" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-quisclas.json";
-vegaEmbed('#vis_dataset-quisclas', spec).then(function(result) {
+vegaEmbed('#vis_quisclas', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-pendigits"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_quisclas");
+var btn = document.getElementById("btn_quisclas");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_pendigits">pendigits</button>
+    <div id="modal_pendigits" class="modal">
+        <div class="modal-content" >
+            <div id="vis_pendigits" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pendigits.json";
-vegaEmbed('#vis_dataset-pendigits', spec).then(function(result) {
+vegaEmbed('#vis_pendigits', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-segment"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_pendigits");
+var btn = document.getElementById("btn_pendigits");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_segment">segment</button>
+    <div id="modal_segment" class="modal">
+        <div class="modal-content" >
+            <div id="vis_segment" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-segment.json";
-vegaEmbed('#vis_dataset-segment', spec).then(function(result) {
+vegaEmbed('#vis_segment', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-allbp"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_segment");
+var btn = document.getElementById("btn_segment");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_allbp">allbp</button>
+    <div id="modal_allbp" class="modal">
+        <div class="modal-content" >
+            <div id="vis_allbp" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-allbp.json";
-vegaEmbed('#vis_dataset-allbp', spec).then(function(result) {
+vegaEmbed('#vis_allbp', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-sphere_3classes"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_allbp");
+var btn = document.getElementById("btn_allbp");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_sphere_3classes">sphere_3classes</button>
+    <div id="modal_sphere_3classes" class="modal">
+        <div class="modal-content" >
+            <div id="vis_sphere_3classes" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_3classes.json";
-vegaEmbed('#vis_dataset-sphere_3classes', spec).then(function(result) {
+vegaEmbed('#vis_sphere_3classes', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-pole_noise_low"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_sphere_3classes");
+var btn = document.getElementById("btn_sphere_3classes");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_pole_noise_low">pole_noise_low</button>
+    <div id="modal_pole_noise_low" class="modal">
+        <div class="modal-content" >
+            <div id="vis_pole_noise_low" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_low.json";
-vegaEmbed('#vis_dataset-pole_noise_low', spec).then(function(result) {
+vegaEmbed('#vis_pole_noise_low', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-satimage"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_pole_noise_low");
+var btn = document.getElementById("btn_pole_noise_low");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_satimage">satimage</button>
+    <div id="modal_satimage" class="modal">
+        <div class="modal-content" >
+            <div id="vis_satimage" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-satimage.json";
-vegaEmbed('#vis_dataset-satimage', spec).then(function(result) {
+vegaEmbed('#vis_satimage', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-letter"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_satimage");
+var btn = document.getElementById("btn_satimage");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_letter">letter</button>
+    <div id="modal_letter" class="modal">
+        <div class="modal-content" >
+            <div id="vis_letter" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-letter.json";
-vegaEmbed('#vis_dataset-letter', spec).then(function(result) {
+vegaEmbed('#vis_letter', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-german_cont"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_letter");
+var btn = document.getElementById("btn_letter");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_german_cont">german_cont</button>
+    <div id="modal_german_cont" class="modal">
+        <div class="modal-content" >
+            <div id="vis_german_cont" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_cont.json";
-vegaEmbed('#vis_dataset-german_cont', spec).then(function(result) {
+vegaEmbed('#vis_german_cont', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-sphere_2classes"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_german_cont");
+var btn = document.getElementById("btn_german_cont");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_sphere_2classes">sphere_2classes</button>
+    <div id="modal_sphere_2classes" class="modal">
+        <div class="modal-content" >
+            <div id="vis_sphere_2classes" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_2classes.json";
-vegaEmbed('#vis_dataset-sphere_2classes', spec).then(function(result) {
+vegaEmbed('#vis_sphere_2classes', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-german_f"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_sphere_2classes");
+var btn = document.getElementById("btn_sphere_2classes");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_german_f">german_f</button>
+    <div id="modal_german_f" class="modal">
+        <div class="modal-content" >
+            <div id="vis_german_f" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_f.json";
-vegaEmbed('#vis_dataset-german_f', spec).then(function(result) {
+vegaEmbed('#vis_german_f', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-cube_3classes"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_german_f");
+var btn = document.getElementById("btn_german_f");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_cube_3classes">cube_3classes</button>
+    <div id="modal_cube_3classes" class="modal">
+        <div class="modal-content" >
+            <div id="vis_cube_3classes" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_3classes.json";
-vegaEmbed('#vis_dataset-cube_3classes', spec).then(function(result) {
+vegaEmbed('#vis_cube_3classes', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-iris"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_cube_3classes");
+var btn = document.getElementById("btn_cube_3classes");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_iris">iris</button>
+    <div id="modal_iris" class="modal">
+        <div class="modal-content" >
+            <div id="vis_iris" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-iris.json";
-vegaEmbed('#vis_dataset-iris', spec).then(function(result) {
+vegaEmbed('#vis_iris', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-pole_noise_medium"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_iris");
+var btn = document.getElementById("btn_iris");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_pole_noise_medium">pole_noise_medium</button>
+    <div id="modal_pole_noise_medium" class="modal">
+        <div class="modal-content" >
+            <div id="vis_pole_noise_medium" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_medium.json";
-vegaEmbed('#vis_dataset-pole_noise_medium', spec).then(function(result) {
+vegaEmbed('#vis_pole_noise_medium', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-adult"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_pole_noise_medium");
+var btn = document.getElementById("btn_pole_noise_medium");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_adult">adult</button>
+    <div id="modal_adult" class="modal">
+        <div class="modal-content" >
+            <div id="vis_adult" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-adult.json";
-vegaEmbed('#vis_dataset-adult', spec).then(function(result) {
+vegaEmbed('#vis_adult', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-german_n"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_adult");
+var btn = document.getElementById("btn_adult");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_german_n">german_n</button>
+    <div id="modal_german_n" class="modal">
+        <div class="modal-content" >
+            <div id="vis_german_n" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_n.json";
-vegaEmbed('#vis_dataset-german_n', spec).then(function(result) {
+vegaEmbed('#vis_german_n', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-wav21"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_german_n");
+var btn = document.getElementById("btn_german_n");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_wav21">wav21</button>
+    <div id="modal_wav21" class="modal">
+        <div class="modal-content" >
+            <div id="vis_wav21" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav21.json";
-vegaEmbed('#vis_dataset-wav21', spec).then(function(result) {
+vegaEmbed('#vis_wav21', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-cube_2classes"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_wav21");
+var btn = document.getElementById("btn_wav21");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_cube_2classes">cube_2classes</button>
+    <div id="modal_cube_2classes" class="modal">
+        <div class="modal-content" >
+            <div id="vis_cube_2classes" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_2classes.json";
-vegaEmbed('#vis_dataset-cube_2classes', spec).then(function(result) {
+vegaEmbed('#vis_cube_2classes', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-triazines"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_cube_2classes");
+var btn = document.getElementById("btn_cube_2classes");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_triazines">triazines</button>
+    <div id="modal_triazines" class="modal">
+        <div class="modal-content" >
+            <div id="vis_triazines" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-triazines.json";
-vegaEmbed('#vis_dataset-triazines', spec).then(function(result) {
+vegaEmbed('#vis_triazines', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-diabetes"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_triazines");
+var btn = document.getElementById("btn_triazines");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_diabetes">diabetes</button>
+    <div id="modal_diabetes" class="modal">
+        <div class="modal-content" >
+            <div id="vis_diabetes" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-diabetes.json";
-vegaEmbed('#vis_dataset-diabetes', spec).then(function(result) {
+vegaEmbed('#vis_diabetes', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-vehicle"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_diabetes");
+var btn = document.getElementById("btn_diabetes");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_vehicle">vehicle</button>
+    <div id="modal_vehicle" class="modal">
+        <div class="modal-content" >
+            <div id="vis_vehicle" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vehicle.json";
-vegaEmbed('#vis_dataset-vehicle', spec).then(function(result) {
+vegaEmbed('#vis_vehicle', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-australian"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_vehicle");
+var btn = document.getElementById("btn_vehicle");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_australian">australian</button>
+    <div id="modal_australian" class="modal">
+        <div class="modal-content" >
+            <div id="vis_australian" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-australian.json";
-vegaEmbed('#vis_dataset-australian', spec).then(function(result) {
+vegaEmbed('#vis_australian', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-page"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_australian");
+var btn = document.getElementById("btn_australian");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_page">page</button>
+    <div id="modal_page" class="modal">
+        <div class="modal-content" >
+            <div id="vis_page" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-page.json";
-vegaEmbed('#vis_dataset-page', spec).then(function(result) {
+vegaEmbed('#vis_page', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-pole_noise_high"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_page");
+var btn = document.getElementById("btn_page");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_pole_noise_high">pole_noise_high</button>
+    <div id="modal_pole_noise_high" class="modal">
+        <div class="modal-content" >
+            <div id="vis_pole_noise_high" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_high.json";
-vegaEmbed('#vis_dataset-pole_noise_high', spec).then(function(result) {
+vegaEmbed('#vis_pole_noise_high', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-lib_cons_miss5"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_pole_noise_high");
+var btn = document.getElementById("btn_pole_noise_high");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_lib_cons_miss5">lib_cons_miss5</button>
+    <div id="modal_lib_cons_miss5" class="modal">
+        <div class="modal-content" >
+            <div id="vis_lib_cons_miss5" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss5.json";
-vegaEmbed('#vis_dataset-lib_cons_miss5', spec).then(function(result) {
+vegaEmbed('#vis_lib_cons_miss5', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-optical"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_lib_cons_miss5");
+var btn = document.getElementById("btn_lib_cons_miss5");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_optical">optical</button>
+    <div id="modal_optical" class="modal">
+        <div class="modal-content" >
+            <div id="vis_optical" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-optical.json";
-vegaEmbed('#vis_dataset-optical', spec).then(function(result) {
+vegaEmbed('#vis_optical', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-lib_cons_miss25"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_optical");
+var btn = document.getElementById("btn_optical");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_lib_cons_miss25">lib_cons_miss25</button>
+    <div id="modal_lib_cons_miss25" class="modal">
+        <div class="modal-content" >
+            <div id="vis_lib_cons_miss25" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss25.json";
-vegaEmbed('#vis_dataset-lib_cons_miss25', spec).then(function(result) {
+vegaEmbed('#vis_lib_cons_miss25', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-vowel"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_lib_cons_miss25");
+var btn = document.getElementById("btn_lib_cons_miss25");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_vowel">vowel</button>
+    <div id="modal_vowel" class="modal">
+        <div class="modal-content" >
+            <div id="vis_vowel" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vowel.json";
-vegaEmbed('#vis_dataset-vowel', spec).then(function(result) {
+vegaEmbed('#vis_vowel', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-pole_normalization"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_vowel");
+var btn = document.getElementById("btn_vowel");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_pole_normalization">pole_normalization</button>
+    <div id="modal_pole_normalization" class="modal">
+        <div class="modal-content" >
+            <div id="vis_pole_normalization" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_normalization.json";
-vegaEmbed('#vis_dataset-pole_normalization', spec).then(function(result) {
+vegaEmbed('#vis_pole_normalization', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-yeast"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_pole_normalization");
+var btn = document.getElementById("btn_pole_normalization");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_yeast">yeast</button>
+    <div id="modal_yeast" class="modal">
+        <div class="modal-content" >
+            <div id="vis_yeast" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-yeast.json";
-vegaEmbed('#vis_dataset-yeast', spec).then(function(result) {
+vegaEmbed('#vis_yeast', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-lib_cons_sizeDiff"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_yeast");
+var btn = document.getElementById("btn_yeast");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_lib_cons_sizeDiff">lib_cons_sizeDiff</button>
+    <div id="modal_lib_cons_sizeDiff" class="modal">
+        <div class="modal-content" >
+            <div id="vis_lib_cons_sizeDiff" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_sizeDiff.json";
-vegaEmbed('#vis_dataset-lib_cons_sizeDiff', spec).then(function(result) {
+vegaEmbed('#vis_lib_cons_sizeDiff', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-ann"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_lib_cons_sizeDiff");
+var btn = document.getElementById("btn_lib_cons_sizeDiff");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_ann">ann</button>
+    <div id="modal_ann" class="modal">
+        <div class="modal-content" >
+            <div id="vis_ann" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-ann.json";
-vegaEmbed('#vis_dataset-ann', spec).then(function(result) {
+vegaEmbed('#vis_ann', spec).then(function(result) {
 }).catch(console.error);
-</script>
 
-<div id="vis_dataset-byzantine"> </div>
 
-<script type="text/javascript">
+var modal = document.getElementById("modal_ann");
+var btn = document.getElementById("btn_ann");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+
+<div class="grid-item">
+    <button class="button" id="btn_byzantine">byzantine</button>
+    <div id="modal_byzantine" class="modal">
+        <div class="modal-content" >
+            <div id="vis_byzantine" style="text-align:center;"><div class="loader"></div> </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
 var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-byzantine.json";
-vegaEmbed('#vis_dataset-byzantine', spec).then(function(result) {
+vegaEmbed('#vis_byzantine', spec).then(function(result) {
 }).catch(console.error);
-</script>
-</body>
+
+
+var modal = document.getElementById("modal_byzantine");
+var btn = document.getElementById("btn_byzantine");
+
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
+    </script>
+</div>
+</div></body>
 </html>
