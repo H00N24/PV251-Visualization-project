@@ -262,7 +262,12 @@ for data_file in data_files:
     scale = alt.Scale(domain=(-0.1, 1.1))
 
     selection = alt.selection_multi(fields=["Class"])
-
+    color = alt.condition(
+        selection,
+        alt.Color("Class:N", legend=None, scale=alt.Scale(range=range_)),
+        alt.value("lightgray"),
+    )
+    opacity = alt.condition(selection, alt.value(1), alt.value(0.2))
     chart = (
         alt.Chart(dataframe)
         .mark_circle()
@@ -270,9 +275,8 @@ for data_file in data_files:
             x=alt.X("X:Q", title="", axis=alt.Axis(labels=False), scale=scale),
             y=alt.X("Y:Q", title="", axis=alt.Axis(labels=False), scale=scale),
             column=alt.Column("Method:N", title="Dataset: " + name),
-            color=alt.condition(
-                selection, alt.Color("Class:N", legend=None), alt.value("lightgray")
-            ),
+            color=color,
+            opacity=opacity,
             tooltip=["Class:N"],
         )
         .add_selection(selection)
