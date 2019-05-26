@@ -131,23 +131,28 @@ html_graph_template = """
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-{class_name}.json";
-vegaEmbed('#vis_{class_name}', spec).then(function(result) {{
+var spec{id} = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-{class_name}.json";
+vegaEmbed('#vis_{class_name}', spec{id}).then(function(result) {{
 }}).catch(console.error);
 
 
-var modal = document.getElementById("modal_{class_name}");
-var btn = document.getElementById("btn_{class_name}");
+var modal{id} = document.getElementById("modal_{class_name}");
+var btn{id} = document.getElementById("btn_{class_name}");
 
-btn.onclick = function() {{
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn{id} .onclick = function() {{
+    modal{id}.style.display = "block";
+    opened_modal = modal{id};
 }}
 
 
 window.onclick = function(event) {{
-if (event.target == modal) {{
-    modal.style.display = "none";
-}}
+    if (event.target == opened_modal) {{
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }}
 }}
     </script>
 </div>
@@ -255,7 +260,7 @@ data_dir = "data"
 data_files = [x for x in os.listdir(data_dir) if x != "classifiers-comparison.csv"]
 
 chart_htmls = []
-for data_file in data_files:
+for index, data_file in enumerate(data_files):
     dataframe = pd.read_csv(os.path.join(data_dir, data_file))
     name = data_file.replace(".csv", "")
 
@@ -283,7 +288,7 @@ for data_file in data_files:
         .interactive()
     )
 
-    chart_htmls.append(html_graph_template.format(class_name=name))
+    chart_htmls.append(html_graph_template.format(class_name=name, id=index))
     # chart.save("html/dataset-" + name + ".html")
     chart.save("json/dataset-" + name + ".json")
 

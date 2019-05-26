@@ -1,13 +1,24 @@
 # PV251 Visualization project
 
-
 ### Preview
 * [Online visualization preview](https://www.fi.muni.cz/~xkurak/)
 * [GitHub](https://github.com/H00N24/PV251-Visualization-project)
 
+
+This visualization displays a comparison of different classification methods on a set of datasets. In the first part [Comparison of classifiers](Comparison-of-classifiers), we could see the accuracy (cross-validation) for every classifier and dataset.
+In the second part, there is a comparison of three dimension reduction methods.
+
+### Interactions
 #### Comparison of classifiers
+It is possible to select classifier either by clicking on datapoint in the parallel coordinates graph, legend or bar chart showing mean accuracy (see giff bellow).
+Interactions help to compare the results for every classifier.
+
 ![](img/comparison.gif)
 #### Comparison of dimension reduction methods
+It is possible to choose the datasets by clicking on the buttons, then you can zoom in/out or select any class to see where it is located in different methods (see giff bellow).
+Interactions help to compare the dimension reduction methods.
+
+
 ![](img/dimension-reduction.gif)
 
 ### Visualization

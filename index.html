@@ -120,23 +120,28 @@ vegaEmbed('#vis_comparison', spec).then(function(result) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-fluid.json";
-vegaEmbed('#vis_fluid', spec).then(function(result) {
+var spec0 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-fluid.json";
+vegaEmbed('#vis_fluid', spec0).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_fluid");
-var btn = document.getElementById("btn_fluid");
+var modal0 = document.getElementById("modal_fluid");
+var btn0 = document.getElementById("btn_fluid");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn0 .onclick = function() {
+    modal0.style.display = "block";
+    opened_modal = modal0;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -150,23 +155,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav40.json";
-vegaEmbed('#vis_wav40', spec).then(function(result) {
+var spec1 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav40.json";
+vegaEmbed('#vis_wav40', spec1).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_wav40");
-var btn = document.getElementById("btn_wav40");
+var modal1 = document.getElementById("modal_wav40");
+var btn1 = document.getElementById("btn_wav40");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn1 .onclick = function() {
+    modal1.style.display = "block";
+    opened_modal = modal1;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -180,23 +190,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss10.json";
-vegaEmbed('#vis_lib_cons_miss10', spec).then(function(result) {
+var spec2 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss10.json";
+vegaEmbed('#vis_lib_cons_miss10', spec2).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_lib_cons_miss10");
-var btn = document.getElementById("btn_lib_cons_miss10");
+var modal2 = document.getElementById("modal_lib_cons_miss10");
+var btn2 = document.getElementById("btn_lib_cons_miss10");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn2 .onclick = function() {
+    modal2.style.display = "block";
+    opened_modal = modal2;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -210,23 +225,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-quisclas.json";
-vegaEmbed('#vis_quisclas', spec).then(function(result) {
+var spec3 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-quisclas.json";
+vegaEmbed('#vis_quisclas', spec3).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_quisclas");
-var btn = document.getElementById("btn_quisclas");
+var modal3 = document.getElementById("modal_quisclas");
+var btn3 = document.getElementById("btn_quisclas");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn3 .onclick = function() {
+    modal3.style.display = "block";
+    opened_modal = modal3;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -240,23 +260,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pendigits.json";
-vegaEmbed('#vis_pendigits', spec).then(function(result) {
+var spec4 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pendigits.json";
+vegaEmbed('#vis_pendigits', spec4).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_pendigits");
-var btn = document.getElementById("btn_pendigits");
+var modal4 = document.getElementById("modal_pendigits");
+var btn4 = document.getElementById("btn_pendigits");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn4 .onclick = function() {
+    modal4.style.display = "block";
+    opened_modal = modal4;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -270,23 +295,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-segment.json";
-vegaEmbed('#vis_segment', spec).then(function(result) {
+var spec5 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-segment.json";
+vegaEmbed('#vis_segment', spec5).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_segment");
-var btn = document.getElementById("btn_segment");
+var modal5 = document.getElementById("modal_segment");
+var btn5 = document.getElementById("btn_segment");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn5 .onclick = function() {
+    modal5.style.display = "block";
+    opened_modal = modal5;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -300,23 +330,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-allbp.json";
-vegaEmbed('#vis_allbp', spec).then(function(result) {
+var spec6 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-allbp.json";
+vegaEmbed('#vis_allbp', spec6).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_allbp");
-var btn = document.getElementById("btn_allbp");
+var modal6 = document.getElementById("modal_allbp");
+var btn6 = document.getElementById("btn_allbp");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn6 .onclick = function() {
+    modal6.style.display = "block";
+    opened_modal = modal6;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -330,23 +365,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_3classes.json";
-vegaEmbed('#vis_sphere_3classes', spec).then(function(result) {
+var spec7 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_3classes.json";
+vegaEmbed('#vis_sphere_3classes', spec7).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_sphere_3classes");
-var btn = document.getElementById("btn_sphere_3classes");
+var modal7 = document.getElementById("modal_sphere_3classes");
+var btn7 = document.getElementById("btn_sphere_3classes");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn7 .onclick = function() {
+    modal7.style.display = "block";
+    opened_modal = modal7;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -360,23 +400,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_low.json";
-vegaEmbed('#vis_pole_noise_low', spec).then(function(result) {
+var spec8 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_low.json";
+vegaEmbed('#vis_pole_noise_low', spec8).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_pole_noise_low");
-var btn = document.getElementById("btn_pole_noise_low");
+var modal8 = document.getElementById("modal_pole_noise_low");
+var btn8 = document.getElementById("btn_pole_noise_low");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn8 .onclick = function() {
+    modal8.style.display = "block";
+    opened_modal = modal8;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -390,23 +435,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-satimage.json";
-vegaEmbed('#vis_satimage', spec).then(function(result) {
+var spec9 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-satimage.json";
+vegaEmbed('#vis_satimage', spec9).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_satimage");
-var btn = document.getElementById("btn_satimage");
+var modal9 = document.getElementById("modal_satimage");
+var btn9 = document.getElementById("btn_satimage");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn9 .onclick = function() {
+    modal9.style.display = "block";
+    opened_modal = modal9;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -420,23 +470,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-letter.json";
-vegaEmbed('#vis_letter', spec).then(function(result) {
+var spec10 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-letter.json";
+vegaEmbed('#vis_letter', spec10).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_letter");
-var btn = document.getElementById("btn_letter");
+var modal10 = document.getElementById("modal_letter");
+var btn10 = document.getElementById("btn_letter");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn10 .onclick = function() {
+    modal10.style.display = "block";
+    opened_modal = modal10;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -450,23 +505,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_cont.json";
-vegaEmbed('#vis_german_cont', spec).then(function(result) {
+var spec11 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_cont.json";
+vegaEmbed('#vis_german_cont', spec11).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_german_cont");
-var btn = document.getElementById("btn_german_cont");
+var modal11 = document.getElementById("modal_german_cont");
+var btn11 = document.getElementById("btn_german_cont");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn11 .onclick = function() {
+    modal11.style.display = "block";
+    opened_modal = modal11;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -480,23 +540,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_2classes.json";
-vegaEmbed('#vis_sphere_2classes', spec).then(function(result) {
+var spec12 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-sphere_2classes.json";
+vegaEmbed('#vis_sphere_2classes', spec12).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_sphere_2classes");
-var btn = document.getElementById("btn_sphere_2classes");
+var modal12 = document.getElementById("modal_sphere_2classes");
+var btn12 = document.getElementById("btn_sphere_2classes");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn12 .onclick = function() {
+    modal12.style.display = "block";
+    opened_modal = modal12;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -510,23 +575,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_f.json";
-vegaEmbed('#vis_german_f', spec).then(function(result) {
+var spec13 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_f.json";
+vegaEmbed('#vis_german_f', spec13).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_german_f");
-var btn = document.getElementById("btn_german_f");
+var modal13 = document.getElementById("modal_german_f");
+var btn13 = document.getElementById("btn_german_f");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn13 .onclick = function() {
+    modal13.style.display = "block";
+    opened_modal = modal13;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -540,23 +610,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_3classes.json";
-vegaEmbed('#vis_cube_3classes', spec).then(function(result) {
+var spec14 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_3classes.json";
+vegaEmbed('#vis_cube_3classes', spec14).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_cube_3classes");
-var btn = document.getElementById("btn_cube_3classes");
+var modal14 = document.getElementById("modal_cube_3classes");
+var btn14 = document.getElementById("btn_cube_3classes");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn14 .onclick = function() {
+    modal14.style.display = "block";
+    opened_modal = modal14;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -570,23 +645,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-iris.json";
-vegaEmbed('#vis_iris', spec).then(function(result) {
+var spec15 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-iris.json";
+vegaEmbed('#vis_iris', spec15).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_iris");
-var btn = document.getElementById("btn_iris");
+var modal15 = document.getElementById("modal_iris");
+var btn15 = document.getElementById("btn_iris");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn15 .onclick = function() {
+    modal15.style.display = "block";
+    opened_modal = modal15;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -600,23 +680,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_medium.json";
-vegaEmbed('#vis_pole_noise_medium', spec).then(function(result) {
+var spec16 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_medium.json";
+vegaEmbed('#vis_pole_noise_medium', spec16).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_pole_noise_medium");
-var btn = document.getElementById("btn_pole_noise_medium");
+var modal16 = document.getElementById("modal_pole_noise_medium");
+var btn16 = document.getElementById("btn_pole_noise_medium");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn16 .onclick = function() {
+    modal16.style.display = "block";
+    opened_modal = modal16;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -630,23 +715,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-adult.json";
-vegaEmbed('#vis_adult', spec).then(function(result) {
+var spec17 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-adult.json";
+vegaEmbed('#vis_adult', spec17).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_adult");
-var btn = document.getElementById("btn_adult");
+var modal17 = document.getElementById("modal_adult");
+var btn17 = document.getElementById("btn_adult");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn17 .onclick = function() {
+    modal17.style.display = "block";
+    opened_modal = modal17;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -660,23 +750,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_n.json";
-vegaEmbed('#vis_german_n', spec).then(function(result) {
+var spec18 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-german_n.json";
+vegaEmbed('#vis_german_n', spec18).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_german_n");
-var btn = document.getElementById("btn_german_n");
+var modal18 = document.getElementById("modal_german_n");
+var btn18 = document.getElementById("btn_german_n");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn18 .onclick = function() {
+    modal18.style.display = "block";
+    opened_modal = modal18;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -690,23 +785,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav21.json";
-vegaEmbed('#vis_wav21', spec).then(function(result) {
+var spec19 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-wav21.json";
+vegaEmbed('#vis_wav21', spec19).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_wav21");
-var btn = document.getElementById("btn_wav21");
+var modal19 = document.getElementById("modal_wav21");
+var btn19 = document.getElementById("btn_wav21");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn19 .onclick = function() {
+    modal19.style.display = "block";
+    opened_modal = modal19;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -720,23 +820,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_2classes.json";
-vegaEmbed('#vis_cube_2classes', spec).then(function(result) {
+var spec20 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-cube_2classes.json";
+vegaEmbed('#vis_cube_2classes', spec20).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_cube_2classes");
-var btn = document.getElementById("btn_cube_2classes");
+var modal20 = document.getElementById("modal_cube_2classes");
+var btn20 = document.getElementById("btn_cube_2classes");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn20 .onclick = function() {
+    modal20.style.display = "block";
+    opened_modal = modal20;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -750,23 +855,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-triazines.json";
-vegaEmbed('#vis_triazines', spec).then(function(result) {
+var spec21 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-triazines.json";
+vegaEmbed('#vis_triazines', spec21).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_triazines");
-var btn = document.getElementById("btn_triazines");
+var modal21 = document.getElementById("modal_triazines");
+var btn21 = document.getElementById("btn_triazines");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn21 .onclick = function() {
+    modal21.style.display = "block";
+    opened_modal = modal21;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -780,23 +890,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-diabetes.json";
-vegaEmbed('#vis_diabetes', spec).then(function(result) {
+var spec22 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-diabetes.json";
+vegaEmbed('#vis_diabetes', spec22).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_diabetes");
-var btn = document.getElementById("btn_diabetes");
+var modal22 = document.getElementById("modal_diabetes");
+var btn22 = document.getElementById("btn_diabetes");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn22 .onclick = function() {
+    modal22.style.display = "block";
+    opened_modal = modal22;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -810,23 +925,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vehicle.json";
-vegaEmbed('#vis_vehicle', spec).then(function(result) {
+var spec23 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vehicle.json";
+vegaEmbed('#vis_vehicle', spec23).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_vehicle");
-var btn = document.getElementById("btn_vehicle");
+var modal23 = document.getElementById("modal_vehicle");
+var btn23 = document.getElementById("btn_vehicle");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn23 .onclick = function() {
+    modal23.style.display = "block";
+    opened_modal = modal23;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -840,23 +960,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-australian.json";
-vegaEmbed('#vis_australian', spec).then(function(result) {
+var spec24 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-australian.json";
+vegaEmbed('#vis_australian', spec24).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_australian");
-var btn = document.getElementById("btn_australian");
+var modal24 = document.getElementById("modal_australian");
+var btn24 = document.getElementById("btn_australian");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn24 .onclick = function() {
+    modal24.style.display = "block";
+    opened_modal = modal24;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -870,23 +995,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-page.json";
-vegaEmbed('#vis_page', spec).then(function(result) {
+var spec25 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-page.json";
+vegaEmbed('#vis_page', spec25).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_page");
-var btn = document.getElementById("btn_page");
+var modal25 = document.getElementById("modal_page");
+var btn25 = document.getElementById("btn_page");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn25 .onclick = function() {
+    modal25.style.display = "block";
+    opened_modal = modal25;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -900,23 +1030,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_high.json";
-vegaEmbed('#vis_pole_noise_high', spec).then(function(result) {
+var spec26 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_noise_high.json";
+vegaEmbed('#vis_pole_noise_high', spec26).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_pole_noise_high");
-var btn = document.getElementById("btn_pole_noise_high");
+var modal26 = document.getElementById("modal_pole_noise_high");
+var btn26 = document.getElementById("btn_pole_noise_high");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn26 .onclick = function() {
+    modal26.style.display = "block";
+    opened_modal = modal26;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -930,23 +1065,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss5.json";
-vegaEmbed('#vis_lib_cons_miss5', spec).then(function(result) {
+var spec27 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss5.json";
+vegaEmbed('#vis_lib_cons_miss5', spec27).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_lib_cons_miss5");
-var btn = document.getElementById("btn_lib_cons_miss5");
+var modal27 = document.getElementById("modal_lib_cons_miss5");
+var btn27 = document.getElementById("btn_lib_cons_miss5");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn27 .onclick = function() {
+    modal27.style.display = "block";
+    opened_modal = modal27;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -960,23 +1100,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-optical.json";
-vegaEmbed('#vis_optical', spec).then(function(result) {
+var spec28 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-optical.json";
+vegaEmbed('#vis_optical', spec28).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_optical");
-var btn = document.getElementById("btn_optical");
+var modal28 = document.getElementById("modal_optical");
+var btn28 = document.getElementById("btn_optical");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn28 .onclick = function() {
+    modal28.style.display = "block";
+    opened_modal = modal28;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -990,23 +1135,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss25.json";
-vegaEmbed('#vis_lib_cons_miss25', spec).then(function(result) {
+var spec29 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_miss25.json";
+vegaEmbed('#vis_lib_cons_miss25', spec29).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_lib_cons_miss25");
-var btn = document.getElementById("btn_lib_cons_miss25");
+var modal29 = document.getElementById("modal_lib_cons_miss25");
+var btn29 = document.getElementById("btn_lib_cons_miss25");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn29 .onclick = function() {
+    modal29.style.display = "block";
+    opened_modal = modal29;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1020,23 +1170,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vowel.json";
-vegaEmbed('#vis_vowel', spec).then(function(result) {
+var spec30 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-vowel.json";
+vegaEmbed('#vis_vowel', spec30).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_vowel");
-var btn = document.getElementById("btn_vowel");
+var modal30 = document.getElementById("modal_vowel");
+var btn30 = document.getElementById("btn_vowel");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn30 .onclick = function() {
+    modal30.style.display = "block";
+    opened_modal = modal30;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1050,23 +1205,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_normalization.json";
-vegaEmbed('#vis_pole_normalization', spec).then(function(result) {
+var spec31 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-pole_normalization.json";
+vegaEmbed('#vis_pole_normalization', spec31).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_pole_normalization");
-var btn = document.getElementById("btn_pole_normalization");
+var modal31 = document.getElementById("modal_pole_normalization");
+var btn31 = document.getElementById("btn_pole_normalization");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn31 .onclick = function() {
+    modal31.style.display = "block";
+    opened_modal = modal31;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1080,23 +1240,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-yeast.json";
-vegaEmbed('#vis_yeast', spec).then(function(result) {
+var spec32 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-yeast.json";
+vegaEmbed('#vis_yeast', spec32).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_yeast");
-var btn = document.getElementById("btn_yeast");
+var modal32 = document.getElementById("modal_yeast");
+var btn32 = document.getElementById("btn_yeast");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn32 .onclick = function() {
+    modal32.style.display = "block";
+    opened_modal = modal32;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1110,23 +1275,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_sizeDiff.json";
-vegaEmbed('#vis_lib_cons_sizeDiff', spec).then(function(result) {
+var spec33 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-lib_cons_sizeDiff.json";
+vegaEmbed('#vis_lib_cons_sizeDiff', spec33).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_lib_cons_sizeDiff");
-var btn = document.getElementById("btn_lib_cons_sizeDiff");
+var modal33 = document.getElementById("modal_lib_cons_sizeDiff");
+var btn33 = document.getElementById("btn_lib_cons_sizeDiff");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn33 .onclick = function() {
+    modal33.style.display = "block";
+    opened_modal = modal33;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1140,23 +1310,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-ann.json";
-vegaEmbed('#vis_ann', spec).then(function(result) {
+var spec34 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-ann.json";
+vegaEmbed('#vis_ann', spec34).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_ann");
-var btn = document.getElementById("btn_ann");
+var modal34 = document.getElementById("modal_ann");
+var btn34 = document.getElementById("btn_ann");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn34 .onclick = function() {
+    modal34.style.display = "block";
+    opened_modal = modal34;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
@@ -1170,23 +1345,28 @@ if (event.target == modal) {
     </div>
 
     <script type="text/javascript">
-var spec = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-byzantine.json";
-vegaEmbed('#vis_byzantine', spec).then(function(result) {
+var spec35 = "https://raw.githubusercontent.com/H00N24/PV251-Visualization-project/master/json/dataset-byzantine.json";
+vegaEmbed('#vis_byzantine', spec35).then(function(result) {
 }).catch(console.error);
 
 
-var modal = document.getElementById("modal_byzantine");
-var btn = document.getElementById("btn_byzantine");
+var modal35 = document.getElementById("modal_byzantine");
+var btn35 = document.getElementById("btn_byzantine");
 
-btn.onclick = function() {
-modal.style.display = "block";
+var opened_modal = null;
+
+
+btn35 .onclick = function() {
+    modal35.style.display = "block";
+    opened_modal = modal35;
 }
 
 
 window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
+    if (event.target == opened_modal) {
+        opened_modal.style.display = "None";
+        opened_modal = null;
+    }
 }
     </script>
 </div>
